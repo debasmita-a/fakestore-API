@@ -19,6 +19,7 @@ public class RestClient {
 	private RequestSpecBuilder specBuilder;
 	
 	public RestClient(Properties prop, String baseURI) {
+		specBuilder = new RequestSpecBuilder();
 		this.prop = prop;
 		this.baseURI = baseURI;
 	}
