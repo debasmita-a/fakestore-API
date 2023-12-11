@@ -1,5 +1,6 @@
 package com.qa.fakestore.client;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
@@ -37,6 +38,11 @@ public class RestClient {
 			break;
 		case "multipart":
 			specBuilder.setContentType(ContentType.MULTIPART);
+			break;
+		case "javascript":
+			Map<String, String> formParamsMap = new HashMap<String, String>();
+			formParamsMap.put("Content-Type", "application/javascript");
+			specBuilder.addQueryParams(formParamsMap);
 			break;
 
 		default:
@@ -132,6 +138,8 @@ public class RestClient {
 		}
 		return RestAssured.given(createRequestSpec(requestBody, contentType)).when().post(serviceUrl);
 	}
+	
+	
 	
 	// PUT
 	
