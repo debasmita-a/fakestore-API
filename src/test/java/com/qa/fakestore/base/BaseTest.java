@@ -9,6 +9,12 @@ import com.qa.fakestore.configuration.ConfigurationManager;
 
 public class BaseTest {
 
+	//service urls :
+	public static final String FAKESTORE_API_USER_ENDPOINT = "/users";
+	public static final String FAKESTORE_API_PRODUCT_ENDPOINT = "/products";
+	public static final String FAKESTORE_API_CART_ENDPOINT = "/carts";
+	public static final String FAKESTORE_API_LOGIN_ENDPOINT = "/auth/login";
+	
 	protected ConfigurationManager configManager;
 	protected Properties prop;
 	protected RestClient restClient;

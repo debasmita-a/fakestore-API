@@ -182,5 +182,12 @@ public class RestClient {
 		return RestAssured.given(createRequestSpec(requestBody, contentType)).when().delete();
 	}
 	
+	public Response delete(String serviceUrl, boolean log) {
+		if(log == true) {
+			return RestAssured.given(createRequestSpec()).log().all().delete(serviceUrl);
+		}
+		return RestAssured.given(createRequestSpec()).delete(serviceUrl);
+	}
+	
 	
 }
