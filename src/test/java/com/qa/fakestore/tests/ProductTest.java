@@ -114,4 +114,11 @@ public class ProductTest extends BaseTest{
 		                                             .get("title");
 		System.out.println("Product deleted : "+ productTitle);
 	}
+	
+	@Test
+	public void getAllCategoryTest() {
+		
+	}
+	
+	//ObjectMapper -- get the created product json and map to Product object
 }
